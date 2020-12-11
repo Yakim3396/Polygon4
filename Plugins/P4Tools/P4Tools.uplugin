@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1",
+	"FriendlyName": "P4Tools",
+	"Description": "Importing models, placing at the level and replacing assets with writing to the database.",
+	"Category": "Polygon4",
+	"CreatedBy": "Yakim3396",
+	"CreatedByURL": "https://p4.silen.org/",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "P4Tools",
+			"Type": "Editor",
+			"LoadingPhase": "PostDefault"
+		}
+	]
+}
