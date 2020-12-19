@@ -16,6 +16,8 @@ public class P4Tools : ModuleRules
 			new string[]
 			{
 				"Core",
+                "Slate",
+                "EditorStyle",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
