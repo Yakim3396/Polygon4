@@ -6,7 +6,7 @@
 
 void FP4ToolsCommands::RegisterCommands()
 {
-	UI_COMMAND(OpenPluginWindow, "P4Tools", "Bring up P4Tools window", EUserInterfaceActionType::Button, FInputGesture());
+    UI_COMMAND(OpenPluginWindow, "P4Tools", "Bring up P4Tools window", EUserInterfaceActionType::Button, FInputGesture());
 }
 
 #undef LOCTEXT_NAMESPACE

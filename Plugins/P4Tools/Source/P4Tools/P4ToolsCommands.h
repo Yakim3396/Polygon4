@@ -9,15 +9,13 @@
 class FP4ToolsCommands : public TCommands<FP4ToolsCommands>
 {
 public:
+    FP4ToolsCommands() : TCommands<FP4ToolsCommands>(TEXT("P4Tools"), NSLOCTEXT("Contexts", "P4Tools", "P4Tools Plugin"), NAME_None, FP4ToolsStyle::GetStyleSetName())
+    {
+    }
 
-	FP4ToolsCommands()
-		: TCommands<FP4ToolsCommands>(TEXT("P4Tools"), NSLOCTEXT("Contexts", "P4Tools", "P4Tools Plugin"), NAME_None, FP4ToolsStyle::GetStyleSetName())
-	{
-	}
-
-	// TCommands<> interface
-	virtual void RegisterCommands() override;
+    // TCommands<> interface
+    virtual void RegisterCommands() override;
 
 public:
-	TSharedPtr< FUICommandInfo > OpenPluginWindow;
+    TSharedPtr<FUICommandInfo> OpenPluginWindow;
 };

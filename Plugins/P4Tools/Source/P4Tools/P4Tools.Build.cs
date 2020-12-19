@@ -4,8 +4,8 @@ using UnrealBuildTool;
 
 public class P4Tools : ModuleRules
 {
-	public P4Tools(ReadOnlyTargetRules Target) : base(Target)
-	{
+    public P4Tools(ReadOnlyTargetRules Target) : base(Target)
+    {
         PrivatePCHHeaderFile = "P4ToolsPrivatePCH.h";
         MinFilesUsingPrecompiledHeaderOverride = 1;
         CppStandard = CppStandardVersion.Latest;
@@ -13,38 +13,38 @@ public class P4Tools : ModuleRules
 
 
         PublicDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"Core",
+            new string[]
+            {
+                "Core",
                 "Slate",
                 "EditorStyle",
 				// ... add other public dependencies that you statically link with here ...
 			}
-			);
-			
-		
-		PrivateDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"Projects",
-				"InputCore",
-				"UnrealEd",
-				"ToolMenus",
-				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
+            );
+
+
+        PrivateDependencyModuleNames.AddRange(
+            new string[]
+            {
+                "Projects",
+                "InputCore",
+                "UnrealEd",
+                "ToolMenus",
+                "CoreUObject",
+                "Engine",
+                "Slate",
+                "SlateCore",
 				// ... tools module
                 "SampleModule",
             }
-			);
-		
-		
-		DynamicallyLoadedModuleNames.AddRange(
-			new string[]
-			{
+            );
+
+
+        DynamicallyLoadedModuleNames.AddRange(
+            new string[]
+            {
 				// ... add any modules that your module loads dynamically here ...
 			}
-			);
-	}
+            );
+    }
 }
