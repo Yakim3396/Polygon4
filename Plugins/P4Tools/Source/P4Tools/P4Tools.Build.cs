@@ -32,8 +32,9 @@ public class P4Tools : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				// ... add private dependencies that you statically link with here ...	
-			}
+				// ... tools module
+                "SampleModule",
+            }
 			);
 		
 		
