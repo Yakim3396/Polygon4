@@ -9,6 +9,8 @@
 #include "Widgets/Text/STextBlock.h"
 #include "ToolMenus.h"
 
+#include "Widgets/SP4ToolsWindow.h"
+
 static const FName P4ToolsTabName("P4Tools");
 
 #define LOCTEXT_NAMESPACE "FP4ToolsModule"
@@ -54,24 +56,11 @@ void FP4ToolsModule::ShutdownModule()
 
 TSharedRef<SDockTab> FP4ToolsModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
 {
-	FText WidgetText = FText::Format(
-		LOCTEXT("WindowWidgetText", "Add code to {0} in {1} to override this window's contents"),
-		FText::FromString(TEXT("FP4ToolsModule::OnSpawnPluginTab")),
-		FText::FromString(TEXT("P4Tools.cpp"))
-		);
-
-	return SNew(SDockTab)
-		.TabRole(ETabRole::NomadTab)
-		[
-			// Put your tab content here!
-			SNew(SBox)
-			.HAlign(HAlign_Center)
-			.VAlign(VAlign_Center)
-			[
-				SNew(STextBlock)
-				.Text(WidgetText)
-			]
-		];
+    const TSharedRef<SDockTab> DockTab = SNew(SDockTab).TabRole(ETabRole::MajorTab);
+    TSharedRef<SP4ToolsWindow> NewWindow = SNew(SP4ToolsWindow, DockTab, SpawnTabArgs.GetOwnerWindow());
+    P4ToolsWindow = NewWindow;
+    DockTab->SetContent(NewWindow);
+    return DockTab;
 }
 
 void FP4ToolsModule::PluginButtonClicked()

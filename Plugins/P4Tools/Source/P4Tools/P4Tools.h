@@ -27,4 +27,6 @@ private:
 
 private:
 	TSharedPtr<class FUICommandList> PluginCommands;
+
+    TSharedPtr<class SP4ToolsWindow> P4ToolsWindow;
 };
