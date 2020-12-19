@@ -6,10 +6,13 @@ public class P4Tools : ModuleRules
 {
 	public P4Tools(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
-		
-		PublicDependencyModuleNames.AddRange(
+        PrivatePCHHeaderFile = "P4ToolsPrivatePCH.h";
+        MinFilesUsingPrecompiledHeaderOverride = 1;
+        CppStandard = CppStandardVersion.Latest;
+        bUseUnity = false;
+
+
+        PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"Core",
